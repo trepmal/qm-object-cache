@@ -34,12 +34,12 @@
 	margin: 10px 0 !important;
 }
 
-.object-cache-stats-menu-target {
+#query-monitor-main .object-cache-stats-menu-target {
 	padding: 5px;
 }
 
-.object-cache-stats-menu-target pre {
-	font-family: monospace;
+#query-monitor-main .object-cache-stats-menu-target pre {
+	font-family: monospace !important;
 	white-space: pre-wrap !important;
 	margin: 1rem 0 !important;
 }
