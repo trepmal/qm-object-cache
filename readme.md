@@ -1,5 +1,4 @@
-# Query Monitor: AllOptions
+# Query Monitor: Object Cache
 
-Shows sizes of values in alloptions (autoloaded-options)
 
 ![screenshot](screenshot-1.png)
