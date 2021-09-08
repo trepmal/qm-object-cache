@@ -18,14 +18,13 @@ class QM_Output_ObjectCache extends QM_Output_Html {
 	 * Outputs data in the footer
 	 */
 	public function output() {
-		// $data = $this->collector->get_data();
-		global $wp_object_cache;
 		?>
-		<?php
-			echo "<div id='object-cache-stats'>";
+		<div class="qm qm-non-tabular" id="<?php echo esc_attr($this->collector->id())?>">
+		<div id="object-cache-stats">
+			<?php
+			global $wp_object_cache;
 			$wp_object_cache->stats();
-			echo "</div>";
-		?>
+			?>
 		</div>
 		<?php
 	}
@@ -38,7 +37,6 @@ class QM_Output_ObjectCache extends QM_Output_Html {
 	 * @return array
 	 */
 	public function admin_title( array $title ) {
-
 		return $title;
 	}
 
@@ -48,7 +46,7 @@ class QM_Output_ObjectCache extends QM_Output_Html {
 	 * @return array
 	 */
 	public function admin_class( array $class ) {
-		$class[] = 'qm-objectcache';
+		$class[] = 'qm-object_cache';
 		return $class;
 	}
 
@@ -57,8 +55,8 @@ class QM_Output_ObjectCache extends QM_Output_Html {
 		// $data = $this->collector->get_data();
 
 		$menu[] = $this->menu( array(
-			'id'    => 'qm-objectcache',
-			'href'  => '#qm-objectcache',
+			'id'    => 'qm-object_cache',
+			'href'  => '#qm-object_cache',
 			'title' => __( 'Object Cache', 'query-monitor' ),
 		));
 
